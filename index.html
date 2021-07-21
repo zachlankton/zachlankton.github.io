@@ -7,6 +7,7 @@
   <meta name="author" content="Zach Lankton">
   <meta name="description" content="This Webiste is all about Zach Lankton.  It contains info about him, stories by him, and archival for him. All in this hand coded HTML, CSS, JS web page.">
   <meta name="keywords" content="zach,lankton,blog,html,css,js,code">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +16,17 @@
   <script src="https://kit.fontawesome.com/33b50c3a0a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <div>Zach Lankton</div>
-    <div>About</div>
-    <div>Blog</div>
-    <div>Code</div>
-  </header>
-  <h1>Hello World</h1>
+  <nav id="menu">
+    <header>
+      <h2>Menu</h2>
+    </header>
+  </nav>
+  
+  <main id="panel">
+    <header>
+      <h2>Panel</h2>
+    </header>
+  </main>
 
   <script type="text/javascript">
    function autorun()
@@ -31,6 +36,16 @@
    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
    else window.onload = autorun;
+  </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js" integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70
+    });
   </script>
 </body>
 </html>
